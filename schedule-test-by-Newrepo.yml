@@ -1,0 +1,16 @@
+name: Schedule Test by New repo
+
+on:
+  workflow_dispatch:
+
+  push:
+
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Schedule Test by New repo"
