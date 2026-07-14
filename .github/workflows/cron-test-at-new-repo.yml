@@ -1,4 +1,4 @@
-name: Schedule Test by New repo
+name: cron Test at New repo
 
 on:
   workflow_dispatch:
@@ -6,11 +6,11 @@ on:
   push:
 
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0,30 * * * *'
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Schedule Test by New repo"
+      - run: echo "Schedule Test at New repo"
